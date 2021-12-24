@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style type="text/css">
+
+        body
+        {
+            background-image:url(https://cdn.pixabay.com/photo/2017/11/26/15/16/smiley-2979107_960_720.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+  			background-attachment: fixed;
+            font-family: Times New Roman;
+        }
+        h2
+        {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .Signup
+        {
+            text-align: center;
+            max-width: 350px;
+            border-radius: 20px;
+            margin: auto;
+            background:rgba(0,0,0,0.7);
+            box-sizing: border-box;
+            padding: 50px;
+            color: white;
+            margin-top: 60px;
+
+
+        }
+        .block
+        {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px 6px;
+            background: rgba(0,0,0,0.10);
+            outline: none;
+            border: none;
+            border-bottom: 1px dotted #fff;
+            border-radius: 5px;
+            margin: 5px;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+
+        }
+        input[type=Submit]
+        {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 0;
+            margin top: 30px;
+            outline: none;
+            border: none;
+            background: #60adde;
+            opacity: 0.7;
+            border-radius: 20px;
+            font-size: 20px;
+            color: #fff;
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="form">
+    <form class="Signup" ng-app="myApp" ng-controller="validateCtrl" name="myForm" non validate action="http://localhost:63342/Register_DM/DM%20project/Reviws.html?_ijt=sspdg4bcv0t0c03fapm8lof2ct&_ij_reload=RELOAD_ON_SAVE" method="post" >
+        <h2>Sign Up Here</h2>
+        <p>
+            <input class="block" type="text" id="fname" name="userf" ng-model="userf" placeholder="First Name" required>
+            <span ng-show="myForm.userf.$dirty && myForm.userf.$invalid">
+            <span ng-show="myForm.userf.$error.required">First name is required.</span>
+            </span>
+        </p>
+        <p>
+            <input class="block" type="text" id="lname" name="userl"   ng-model="userl"  placeholder="Last Name" required>
+            <span  ng-show="myForm.userl.$dirty && myForm.userl.$invalid">
+            <span ng-show="myForm.userl.$error.required">Last Name is required.</span>
+        </p>
+        <p>
+            <input class="block"  type="email"  name="email"  ng-model="email" placeholder="Email" required>
+            <span  ng-show="myForm.email.$dirty && myForm.email.$invalid">
+            <span ng-show="myForm.email.$error.required">Email is required.</span>
+            <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+
+        </p>
+        <p>
+            <input type="password" class="block" name="password" ng-model="password" placeholder="Password" ng-minlength="5" required >
+            <span  ng-show="myForm.password.$dirty && myForm.password.$invalid">
+            <span ng-show="myForm.password.$error.required">Password is required.</span>
+            <span ng-show="myForm.password.$error.password">Invalid email address.</span>
+
+
+        </p>
+            <br>
+            <br>
+            <input type="Submit" ng-model="Submit"  value="Submit"  required >
+            <!--<a href="file:///C:/Users/maggi/Desktop/WEB/reqpage.html?">
+            <input type="Submit"  value="Submit">
+        </a-->
+
+
+
+    </form>
+    <script>
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+    $scope.userf = '';
+     $scope.userl = '';
+    $scope.email = '';
+    $scope.password = '';
+    $scope.Submit="http://localhost:63342/Register_DM/DM%20project/Reviws.html?_ijt=sspdg4bcv0t0c03fapm8lof2ct&_ij_reload=RELOAD_ON_SAVE";
+
+});
+</script>
+
+</div>
+
+</body>
+</html>
